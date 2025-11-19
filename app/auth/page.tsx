@@ -26,13 +26,15 @@ const AuthPage = () => {
             alt="Xorbit Logo"
             width={70}
             height={70}
-            className="mx-auto mb-2"
+            className="mx-auto"
           />
           <CardTitle className="text-3xl">
             {isSignIn ? "Sign In to Xorbit" : "Create an Account"}
           </CardTitle>
           <CardDescription>
-            Access your account and explore the features
+            {isSignIn
+              ? "Welcome back! Please enter your details."
+              : "Excited to have you onboard! Please fill in the details to create your account."}
           </CardDescription>
         </CardHeader>
         <CardContent>{isSignIn ? <FormSignIn /> : <FormSignUp />}</CardContent>

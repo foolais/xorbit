@@ -32,7 +32,7 @@ const FormSignIn = () => {
                 {...field}
                 id={field.name}
                 type="email"
-                placeholder="Email"
+                placeholder="xorbit@example.com"
                 aria-invalid={fieldState.invalid}
               />
               {fieldState.error && <FieldError errors={[fieldState.error]} />}
@@ -43,13 +43,13 @@ const FormSignIn = () => {
           control={form.control}
           name="password"
           render={({ field, fieldState }) => (
-            <Field aria-invalid={fieldState.invalid}>
+            <Field data-invalid={fieldState.invalid}>
               <FieldLabel htmlFor={field.name}>Password</FieldLabel>
               <Input
                 {...field}
                 id={field.name}
                 type="password"
-                placeholder="Password"
+                placeholder="*******"
                 aria-invalid={fieldState.invalid}
               />
               {fieldState.error && <FieldError errors={[fieldState.error]} />}
