@@ -1,5 +1,7 @@
 "use client";
 
+import FormSignIn from "@/components/form-sign-in";
+import FormSignUp from "@/components/form-sing-up";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,13 +11,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import Image from "next/image";
+import { useState } from "react";
 
 const AuthPage = () => {
+  const [isSignIn, setIsSignIn] = useState(true);
+
   return (
     <main className="w-full h-dvh flex items-center justify-center">
-      <Card className="w-1/4 max-w-[450px]">
+      <Card className="w-full md:w-1/4 max-w-[450px]">
         <CardHeader className="text-center">
           <Image
             src="/logo.png"
@@ -24,19 +28,27 @@ const AuthPage = () => {
             height={70}
             className="mx-auto mb-2"
           />
-          <CardTitle className="text-3xl">Sign in to your account</CardTitle>
+          <CardTitle className="text-3xl">
+            {isSignIn ? "Sign In to Xorbit" : "Create an Account"}
+          </CardTitle>
           <CardDescription>
             Access your account and explore the features
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <form className="space-y-4">
-            <Input type="email" placeholder="Email" />
-            <Input type="password" placeholder="Password" />
-          </form>
-        </CardContent>
+        <CardContent>{isSignIn ? <FormSignIn /> : <FormSignUp />}</CardContent>
         <CardFooter>
-          <Button className="w-full cursor-pointer">Sign In</Button>
+          <div className="mx-auto">
+            <span>
+              {isSignIn ? "Don't have an account?" : "Already have an account?"}
+            </span>
+            <Button
+              variant="link"
+              className="cursor-pointer font-semibold w-max"
+              onClick={() => setIsSignIn(!isSignIn)}
+            >
+              {isSignIn ? "Sign Up" : "Sign In"}
+            </Button>
+          </div>
         </CardFooter>
       </Card>
     </main>
