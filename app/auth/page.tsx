@@ -1,7 +1,7 @@
 "use client";
 
 import FormSignIn from "@/components/form-sign-in";
-import FormSignUp from "@/components/form-sing-up";
+import FormSignUp from "@/components/form-sign-up";
 import { Button } from "@/components/ui/button";
 import {
   Card,
