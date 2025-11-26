@@ -10,10 +10,10 @@ const ContentHeader = () => {
   const navClassName = "cursor-pointer text-primary";
 
   return (
-    <div className="w-11/12 flex items-center justify-between py-4 px-8 mx-auto">
-      <section className="flex items-center justify-center gap-4">
+    <div className="w-11/12 flex items-center justify-between py-4 mx-auto">
+      <section className="flex items-center justify-center gap-4 w-1/5 min-w-[300px]">
         <Image src={Logo} alt="logo" width={40} height={40} />
-        <Input placeholder="Cari disini..." className="max-w-[300px]" />
+        <Input placeholder="Cari disini..." className="w-full" />
       </section>
       <section className="flex items-center gap-4">
         <Button size="icon-sm" variant="outline" className={navClassName}>
