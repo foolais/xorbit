@@ -10,7 +10,7 @@ const ContentHeader = () => {
   const navClassName = "cursor-pointer text-primary";
 
   return (
-    <div className="w-11/12 flex items-center justify-between py-4 mx-auto">
+    <div className="flex items-center justify-between py-4 mx-auto">
       <section className="flex items-center justify-center gap-4 w-1/5 min-w-[300px]">
         <Image src={Logo} alt="logo" width={40} height={40} />
         <Input placeholder="Cari disini..." className="w-full" />

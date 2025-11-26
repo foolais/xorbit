@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
-import Logo from "@/public/logo.png";
+import AvatarImage from "@/public/avatar.jpg";
 import HeaderImage from "@/public/header.jpg";
 import { Button } from "./ui/button";
 
@@ -15,11 +15,9 @@ const ProfileCard = () => {
             className="w-full h-full rounded-xl object-cover"
           />
           <Image
-            src={Logo}
-            alt="logo"
-            width={80}
-            height={80}
-            className="object-cover absolute bottom-0 translate-y-1/2 left-1/2 -translate-x-1/2 bg-card rounded-xl p-2"
+            src={AvatarImage}
+            alt="Avatar"
+            className="object-cover absolute -bottom-4 translate-y-1/2 left-1/2 -translate-x-1/2 bg-card rounded-xl p-2 w-20 h-20"
           />
           <div className="absolute left-0 mt-2 flex flex-col items-center justify-center">
             <span className="text-lg font-semibold">2000</span>
